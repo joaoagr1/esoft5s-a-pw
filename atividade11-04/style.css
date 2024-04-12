@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* Reset de estilos para garantir consistência em diferentes navegadores */
+/* Reset de estilos para garantir consistência em diferentes navegadores */
 body,
 h1,
 h2,
@@ -28,7 +21,7 @@ td {
 /* Estilos gerais */
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   color: #333;
   background-color: #f4f4f4;
 }
@@ -166,7 +159,7 @@ nav a:hover {
 }
 
 #curiosidades li::marker {
-  content: '🔍';
+  content: "🔍";
 }
 
 #curiosidades ul {
@@ -214,13 +207,13 @@ article {
 
 /* Links */
 
-a[target='_blank'] {
+a[target="_blank"] {
   color: #4592c4;
   font-weight: bold;
   transition: opacity 0.3s ease-in-out;
 }
 
-a[target='_blank']:hover {
+a[target="_blank"]:hover {
   opacity: 0.8;
 }
 
@@ -246,15 +239,15 @@ footer a {
   transition: opacity 0.3s ease-in-out;
 }
 
-footer a[href*='#'] {
+footer a[href*="#"] {
   color: white;
 }
 
-footer a[href*='mailto'] {
+footer a[href*="mailto"] {
   color: orangered;
 }
 
-footer a[href*='tel'] {
+footer a[href*="tel"] {
   color: limegreen;
 }
 
@@ -276,57 +269,4 @@ footer a[href]:hover {
 main > section,
 main > article {
   animation: fadeIn 0.5s ease-in-out forwards;
-}</style>
-</head>
-<body>
-    
-    <header id="header">
-        <h1>Squirtle</h1>
-      </header>
-<main>
-    <H1 id="title">    </H1>
-    <img id="img-poke" src="" alt="">
-</main>
-
-    <footer aria-label="Rodapé">
-        <p aria-label="Copyright">
-          &copy; 2024 Página do Pokémon Squirtle. Todos os direitos reservados.
-        </p>
-        <p><a href="#header">Voltar para o topo</a></p>
-        <p><a href="mailto:contato@squirtlepage.com">Contato via e-mail</a></p>
-        <p><a href="tel:+5555555555">Telefone: (55) 5555-5555</a></p>
-      </footer>
-</body>
-<script>
-   console.log(location.search)
- 
-   const urlParams = new URLSearchParams(location.search)
-   const name = urlParams.get('evolucao')
-   console.log(name)
-
-   var title = document.getElementById('title')
-
-   title.textContent = name;
-   
-   fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-    .then(response => response.json())
-    .then(data => {
-        const spriteUrl = data.sprites.front_default;
-        const urlImg = document.getElementById("img-poke");
-        urlImg.src = spriteUrl;
-    })
-    .catch(error => {
-        console.error('Erro ao carregar os dados do Pokemon:', error);
-    })
-  .then(function (response) {
-    console.log(response.body);
-    return response;
-  })
-  .then(function(response) {
-    console.log(response);
-  });
-
-
-
-</script>
-</html>
+}
