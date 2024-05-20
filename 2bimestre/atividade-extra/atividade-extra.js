@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Função para criar o header
+
   const createHeader = () => {
     const header = document.createElement("header");
     header.id = "header";
@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(header);
   };
 
-  // Função para criar a navegação
   const createNav = () => {
     const nav = document.createElement("nav");
     nav.setAttribute("aria-label", "Navegação principal");
@@ -45,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(nav);
   };
 
-  // Função para criar uma seção
   const createSection = (id, label, contentElements) => {
     const section = document.createElement("section");
     section.id = id;
@@ -61,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return section;
   };
 
-  // Função para criar o main
   const createMain = () => {
     const main = document.createElement("main");
 
@@ -202,7 +199,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(main);
   };
 
-  // Função para criar o footer
   const createFooter = () => {
     const footer = document.createElement("footer");
     footer.setAttribute("aria-label", "Rodapé");
@@ -237,7 +233,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(footer);
   };
 
-  // Chama as funções para criar e adicionar elementos à página
   createHeader();
   createNav();
   createMain();
